@@ -1,0 +1,8 @@
+AddHandler mod_python .py
+PythonHandler test
+PythonDebug On
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /mysite1.wsgi/$1  [QSA,L]
+
